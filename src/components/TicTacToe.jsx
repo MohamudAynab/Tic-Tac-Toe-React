@@ -2,7 +2,10 @@ import { useState, useEffect } from "react";
 import Board from "./Board";
 import GameOver from "./GameOver";
 import GameState from "./GameState";
-import ResetButton from "./ResetButton";
+import Reset from "./Reset";
+import gameOverSoundAsset from "../sounds/game_over.wav";
+import clickSoundAsset from "../sounds/click.wav";
+
 
 const PLAYER_X = "X";
 const PLAYER_O = "O";
@@ -40,7 +43,13 @@ function checkWinner(tiles, setStrikeClass, setGameState) {
       else {
         setGameState(GameState.playerOWins);
       }
+      return;
     }
+  }
+
+  const areAllTilesFilledIn = tiles.every((tile) => tile !== null);
+  if(areAllTilesFilledIn) {
+    setGameState(GameState.draw);
   }
 }
 
@@ -52,6 +61,10 @@ function TicTacToe() {
  
 
   const handleTileClick = (index) => {
+
+    if(gameState !== GameState.inProgress) {
+      return;
+    } 
     if (tiles[index] !== null) {
       return;
     }
@@ -66,11 +79,11 @@ function TicTacToe() {
     }
   };
 
-   const handleResetGame = () => {
-    setTiles(Array(9).fill(null));
-    setPlayerTurn(PLAYER_X);
-    setStrikeClass(null);
-    setGameState(GameState.inProgress);
+   const handleReset = () => {
+   setGameState(gameState.inProgress);
+   setTiles(Array(9).fill(null));
+   setPlayerTurn(PLAYER_X);
+   setStrikeClass(null)
    };
 
   useEffect(() => {
@@ -87,7 +100,7 @@ function TicTacToe() {
         strikeClass={strikeClass}
       />
       <GameOver  gameState={gameState}/>
-      <ResetButton onResetClick={handleResetGame} />
+      <Reset gameState={gameState} onReset={handleReset} />
     </div>
   );
 }
