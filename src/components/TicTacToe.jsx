@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Board from "./Board";
 import GameOver from "./GameOver";
 import GameState from "./GameState";
-import Tile from "./Tile";
 import Reset from "./Reset";
 import gameOverSoundAsset from "../sounds/game_over.wav";
 import clickSoundAsset from "../sounds/click.wav";
@@ -102,7 +101,8 @@ function TicTacToe() {
     if (gameState !== GameState.inProgress) {
       gameOverSound.play();
     }
-  });
+  }, [gameState]);
+  
   return (
     <div>
       <h1>Tic Tac Toe</h1>
