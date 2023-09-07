@@ -81,7 +81,7 @@ function TicTacToe() {
   };
 
   const handleReset = () => {
-    setGameState(gameState.inProgress);
+    setGameState(GameState.inProgress);
     setTiles(Array(9).fill(null));
     setPlayerTurn(PLAYER_X);
     setStrikeClass(null);
@@ -102,7 +102,7 @@ function TicTacToe() {
       gameOverSound.play();
     }
   }, [gameState]);
-  
+
   return (
     <div>
       <h1>Tic Tac Toe</h1>
