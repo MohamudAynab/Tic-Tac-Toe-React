@@ -2,7 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #CCF6C8; /* CCF6C8 (60%) */
+  background-color: #053B50; /* CCF6C8 (60%) */
   color: white;
 }
 
@@ -24,16 +24,16 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #FAFCC2; /* F9C0C0 (30%) */
-  background-color: #F6D6AD; /* CCF6C8 (5%) */
+  border: 2px #176B87; /* F9C0C0 (30%) */
+  background-color: #176B87; /* CCF6C8 (5%) */
 }
 
 .right-border {
-  border-right: 0.2em solid #F0F0F0;
+  border-right: 0.2em solid #EEEEEE;
 }
 
 .bottom-border {
-  border-bottom: 0.2em solid #F0F0F0;
+  border-bottom: 0.2em solid #EEEEEE;
 }
 
 .x-hover:hover::after {
@@ -105,7 +105,7 @@ h1 {
 
 .game-over {
   text-align: center;
-  border: 8px solid #F9C0C0; /* F9C0C0 (60%) */
+  border: 8px solid #64CCC5; /* F9C0C0 (60%) */
   border-style: inset;
   padding: 10px;
   margin-top: 50px;
@@ -116,10 +116,10 @@ h1 {
 .reset-button {
   margin-top: 50px;
   padding: 10px;
-  background-color: #CCF6C8; /* CCF6C8 (10%) */
+  background-color: #053B50; /* CCF6C8 (10%) */
   color: white;
   width: 100%;
   font-size: 1.5em;
-  border: 8px solid #F9C0C0;
+  border: 8px solid #64CCC5;
   border-style: inset;
 }
