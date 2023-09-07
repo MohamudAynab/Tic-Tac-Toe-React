@@ -2,7 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #3C486B;
+  background-color: #CCF6C8; /* CCF6C8 (60%) */
   color: white;
 }
 
@@ -24,9 +24,9 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px solid #FAFCC2; /* F9C0C0 (30%) */
+  background-color: #F6D6AD; /* CCF6C8 (5%) */
 }
-
-
 
 .right-border {
   border-right: 0.2em solid #F0F0F0;
@@ -48,7 +48,7 @@ h1 {
 
 .strike {
   position: absolute;
-  background-color: darkorange;
+  background-color: #F9C0C0; /* F9C0C0 (5%) */
 }
 
 .strike-row-1 {
@@ -105,18 +105,21 @@ h1 {
 
 .game-over {
   text-align: center;
-  border: #5468ff 8px;
+  border: 8px solid #F9C0C0; /* F9C0C0 (60%) */
   border-style: inset;
   padding: 10px;
   margin-top: 50px;
   font-size: 1.5em;
+  color: white; /* FAFCC2 (30%) */
 }
 
 .reset-button {
   margin-top: 50px;
-  padding: 20px;
-  background-color: #0074a6;
+  padding: 10px;
+  background-color: #CCF6C8; /* CCF6C8 (10%) */
   color: white;
   width: 100%;
   font-size: 1.5em;
+  border: 8px solid #F9C0C0;
+  border-style: inset;
 }
