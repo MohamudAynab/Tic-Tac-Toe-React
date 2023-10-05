@@ -2,7 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #053B50; /* CCF6C8 (60%) */
+  background-color: #113946; /* CCF6C8 (60%) */
   color: white;
 }
 
@@ -25,15 +25,15 @@ h1 {
   justify-content: center;
   align-items: center;
   border: 2px #176B87; /* F9C0C0 (30%) */
-  background-color: #176B87; /* CCF6C8 (5%) */
+  background-color: #BCA37F; /* CCF6C8 (5%) */
 }
 
 .right-border {
-  border-right: 0.2em solid #EEEEEE;
+  border-right: 0.2em solid #113946;
 }
 
 .bottom-border {
-  border-bottom: 0.2em solid #EEEEEE;
+  border-bottom: 0.2em solid #113946;
 }
 
 .x-hover:hover::after {
@@ -48,7 +48,7 @@ h1 {
 
 .strike {
   position: absolute;
-  background-color: #F9C0C0; /* F9C0C0 (5%) */
+  background-color: #FFF2D8; /* F9C0C0 (5%) */
 }
 
 .strike-row-1 {
